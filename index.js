@@ -15,4 +15,4 @@ app.use((err, req, res, next) => {
   res.status(errBody.status).send(errBody)
 })
 
-module.exports = {app}
+module.exports = { app }
