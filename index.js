@@ -10,3 +10,7 @@ app.get('/health', (req, res) => {
 })
 
 app.use('/files', files)
+app.use((err, req, res, next) => {
+  const errBody = err.response.data
+  res.status(errBody.status).send(errBody)
+})
