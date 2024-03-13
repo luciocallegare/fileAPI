@@ -49,4 +49,8 @@ const getFilesList = async () => {
   return fileListParsed
 }
 
-module.exports = { getFile, getFilesList }
+const filterFileInfoByName = (filesInfo, fileName) => {
+  return filesInfo?.filter(fileInfo => fileInfo.file === fileName)
+}
+
+module.exports = { getFile, getFilesList, getFilesListNames, filterFileInfoByName }
